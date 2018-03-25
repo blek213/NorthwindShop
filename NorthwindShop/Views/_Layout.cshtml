@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/CSS/LayoutStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="header"><h1 id="Title" >Jessica Shop</h1></div>
+    <div id="sidebar">
+        <p>@Html.ActionLink("Confections", "Confections", "Home")</p>
+        <p>@Html.ActionLink("Beverages", "Beverages", "Home")</p>
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <div id="footer">&copy;  2018 - USA. Jessica Shop</div>
+
+</body>
+</html>
