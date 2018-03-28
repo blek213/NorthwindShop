@@ -22,6 +22,7 @@ namespace NorthwindShop.Controllers
             IEnumerable<Products> confections = DbShop.Database.SqlQuery<Products>("SELECT * FROM Products WHERE CategoryID = 3");
 
             int confectionsCount = 0;
+
             foreach(var b in confections)
             {
                 confectionsCount++;
@@ -38,6 +39,7 @@ namespace NorthwindShop.Controllers
             IEnumerable<Products> beverages = DbShop.Database.SqlQuery<Products>("SELECT * FROM Products WHERE CategoryID = 1");
 
             int confectionsCount = 0;
+
             foreach (var b in beverages)
             {
                 confectionsCount++;
