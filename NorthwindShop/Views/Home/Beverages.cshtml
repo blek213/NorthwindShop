@@ -1,8 +1,22 @@
-﻿
+﻿@model PagedList.IPagedList<NorthwindShop.Models.Products>
+@using PagedList.Mvc;
+
+<link href="~/Content/CSS/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Beverages";
     Layout = "~/Views/_Layout.cshtml";
 }
+<div id="beverages">
+    <ul type="square">
+        @foreach (var b in Model)
+        {
+            <li>@b.ProductName</li>
+        }
 
-<h2>Beverages</h2>
+    </ul>
+</div>
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Confections", new { page }))
+
 
