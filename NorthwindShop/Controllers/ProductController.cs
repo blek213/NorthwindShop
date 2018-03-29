@@ -26,9 +26,20 @@ namespace NorthwindShop.Controllers
 
             return RedirectToAction("Confections", "Home");
         }
-        public ActionResult Beverage()
+        public ActionResult Beverage(int? Id)
         {
-            return View();
+            if (Id != null)
+            {
+                var modelConfection = DbShop.Products.First(p => p.ProductID == Id);
+
+                var modelCategories = DbShop.Categories.First(p => p.CategoryID == modelConfection.CategoryID);
+
+                ViewBag.ImageCategory = modelCategories.Picture;
+
+                return View(modelConfection);
+            }
+
+            return RedirectToAction("Beverages", "Home");
         }
         public ActionResult Cart()
         {

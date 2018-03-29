@@ -10,7 +10,7 @@
     <ul type="square">
         @foreach (var b in Model)
         {
-            <li>@b.ProductName</li>
+            <li><a href="/Product/Beverage/@b.ProductID">@b.ProductName</li>
         }
 
     </ul>

@@ -1,16 +1,16 @@
 ﻿@model NorthwindShop.Models.Products
 
 @{
-    ViewBag.Title = "Confection";
+    ViewBag.Title = "Beverage";
     Layout = "~/Views/_Layout.cshtml";
 }
 
 <link href="~/Content/CSS/ProductCSS.css" rel="stylesheet" />
 
-<div id="ProductName" >@Model.ProductName</div>
+<div id="ProductName">@Model.ProductName</div>
 
 <div id="ProductImage">
-   @Html.Raw("<img style='width:80px; height:60px;' src=\"data:image/jpeg;base64," + Convert.ToBase64String(ViewBag.ImageCategory) + "\" />")
+    @Html.Raw("<img style='width:80px; height:60px;' src=\"data:image/jpeg;base64," + Convert.ToBase64String(ViewBag.ImageCategory) + "\" />")
 </div>
 
 <div id="ProductDescription">
@@ -28,10 +28,11 @@
 
     <p>UnitPrice: @Model.UnitPrice </p>
 
-    
+
 </div>
 
 @using (Html.BeginForm("", "", FormMethod.Post))
 {
-    <input type="submit" value="Buy"/>
+    <input type="submit" value="Buy" />
 }
+
