@@ -105,6 +105,7 @@
   <ItemGroup>
     <Content Include="Content\CSS\CartStyle.css" />
     <Content Include="Content\CSS\LayoutStyle.css" />
+    <Content Include="Content\CSS\ProductCSS.css" />
     <Content Include="Content\Images\JessicaLogo.png" />
     <Content Include="Content\CSS\PagedList.css" />
     <Content Include="Global.asax" />
@@ -147,6 +148,7 @@
     <Content Include="Views\Home\Beverages.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Product\Confection.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -156,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Product\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>

@@ -10,7 +10,7 @@
     <ul type="square">
         @foreach (var b in Model)
         {
-            <li>@b.ProductName</li>
+            <li><a  href="/Product/Confection/@b.ProductID" > @b.ProductName</a></li>
         }
 
     </ul>
@@ -18,3 +18,4 @@
 
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 @Html.PagedListPager(Model, page => Url.Action("Confections", new { page }))
+

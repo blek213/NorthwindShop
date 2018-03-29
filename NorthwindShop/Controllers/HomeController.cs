@@ -17,8 +17,7 @@ namespace NorthwindShop.Controllers
             return View();
         }
         public ActionResult Confections(int? page)
-        {
-            
+        {         
             IEnumerable<Products> confections = DbShop.Database.SqlQuery<Products>("SELECT * FROM Products WHERE CategoryID = 3");
 
             int confectionsCount = 0;
@@ -51,6 +50,9 @@ namespace NorthwindShop.Controllers
 
             return View(beverages.ToPagedList(pageNumber,pageSize));
         }
+
+
+ 
 
     }
 }
