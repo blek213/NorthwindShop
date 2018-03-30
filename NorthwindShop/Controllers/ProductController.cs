@@ -48,9 +48,12 @@ namespace NorthwindShop.Controllers
 
         public ActionResult Cart()
         {
-            HttpCookie cookieNickName = Request.Cookies["Product"];
+            HttpCookie cookieProduct= Request.Cookies["Product"];
 
-            ViewBag.ourProduct = cookieNickName.Value;
+            int cookieValue = Int32.Parse(cookieProduct.Value);
+
+            var FoundModel = DbShop.Products.First(p => p.ProductID == cookieValue);
+            ViewBag.ourProduct = FoundModel;
 
             return View();
         }
@@ -60,7 +63,9 @@ namespace NorthwindShop.Controllers
         {
             var Product = DbShop.Products.First(p => p.ProductID == Id);
 
-            CookieContainer cookieContainer = new CookieContainer();
+            HttpCookie cookieProduct = new HttpCookie("Product",Id.ToString());
+
+            Response.Cookies.Add(cookieProduct);
 
             return RedirectToAction("Confection", "Product", new { Id = Id });
         }

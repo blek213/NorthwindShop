@@ -124,19 +124,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Categories.cs" />
-    <Compile Include="Models\CustomerDemographics.cs" />
-    <Compile Include="Models\Customers.cs" />
-    <Compile Include="Models\Employees.cs" />
-    <Compile Include="Models\Orders.cs" />
-    <Compile Include="Models\Order_Details.cs" />
-    <Compile Include="Models\Products.cs" />
-    <Compile Include="Models\Region.cs" />
-    <Compile Include="Models\Shippers.cs" />
+    <Compile Include="Models\ShopModels\Categories.cs" />
+    <Compile Include="Models\ShopModels\CustomerDemographics.cs" />
+    <Compile Include="Models\ShopModels\Customers.cs" />
+    <Compile Include="Models\ShopModels\Employees.cs" />
+    <Compile Include="Models\ShopModels\Orders.cs" />
+    <Compile Include="Models\ShopModels\Order_Details.cs" />
+    <Compile Include="Models\ShopModels\Products.cs" />
+    <Compile Include="Models\ShopModels\Region.cs" />
+    <Compile Include="Models\ShopModels\Shippers.cs" />
     <Compile Include="Models\ShopContext.cs" />
-    <Compile Include="Models\Suppliers.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
-    <Compile Include="Models\Territories.cs" />
+    <Compile Include="Models\ShopModels\Suppliers.cs" />
+    <Compile Include="Models\ShopModels\sysdiagrams.cs" />
+    <Compile Include="Models\TemporaryModels\Login.cs" />
+    <Compile Include="Models\ShopModels\Territories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
