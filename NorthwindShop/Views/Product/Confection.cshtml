@@ -31,7 +31,8 @@
     
 </div>
 
-@using (Html.BeginForm("", "", FormMethod.Post))
+@using (Html.BeginForm("Cart", "Product", FormMethod.Post))
 {
+    <input name="Id" type="hidden" value="@Model.ProductID" />
     <input type="submit" value="Buy"/>
 }

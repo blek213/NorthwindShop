@@ -150,6 +150,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Product\Confection.cshtml" />
     <Content Include="Views\Product\Beverage.cshtml" />
+    <Content Include="Views\Product\Cart.cshtml" />
+    <Content Include="Views\User\SignIn.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
