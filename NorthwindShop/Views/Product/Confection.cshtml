@@ -6,6 +6,9 @@
 }
 
 <link href="~/Content/CSS/ProductCSS.css" rel="stylesheet" />
+<link href="~/Content/CSS/WindowCSS.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/CustomScripts/WindowScript.js"></script>
 
 <div id="ProductName" >@Model.ProductName</div>
 
@@ -34,5 +37,19 @@
 @using (Html.BeginForm("Cart", "Product", FormMethod.Post))
 {
     <input name="Id" type="hidden" value="@Model.ProductID" />
-    <input type="submit" value="Buy"/>
+    <input class="open_window" type="submit" value="Buy"/>
 }
+
+<div class="overlay" title="Shopping cart"></div>
+<div class="popup">
+    <div class="close_window">x</div>
+    <h1 style="text-align:center;">Shopping cart</h1>
+    <ol>
+        <li>Halllo JanNi <span><input id="minusButton" class="ArthButtons" type="button" value="-" /></span><span class="CountProducts"><input id="InputText" type="text" value="0" size="2" maxlength="4" /></span><span><input id="plusButton" class="ArthButtons" type="button" value="+" /></span></li>
+        <div id="ButtonsTwoActions">
+            <span id="ContinueButtonTag"><input id="ContinueButton" type="button" value="Continue"></span><span id="BuyButtonTag"><input id="BuyButton" type="button" value="Buy"></span>
+        </div>
+    </ol>
+
+</div>
+

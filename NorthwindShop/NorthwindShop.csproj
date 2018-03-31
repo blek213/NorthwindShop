@@ -105,11 +105,14 @@
   <ItemGroup>
     <Content Include="Content\CSS\CartStyle.css" />
     <Content Include="Content\CSS\LayoutStyle.css" />
+    <Content Include="Content\CSS\ModalWindowCSS.css" />
     <Content Include="Content\CSS\ProductCSS.css" />
+    <Content Include="Content\CSS\WindowCSS.css" />
     <Content Include="Content\Images\JessicaLogo.png" />
     <Content Include="Content\CSS\PagedList.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\CustomScripts\WindowScript.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
