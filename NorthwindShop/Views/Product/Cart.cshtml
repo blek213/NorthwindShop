@@ -5,15 +5,14 @@
 }
 
 <div id="CartLayout">
-    
-
     <ol>
-      
-     <li><b>Name:</b> @ViewBag.ourProduct.ProductName <b>Count:</b> </li>
-    
+        @{
+            if (Request.Cookies["Product"] != null)
+            {
+                <li><b>Name:</b> @ViewBag.ourProduct.ProductName <b>Count:</b> @ViewBag.Count </li>
+
+            }
+        }
     </ol>
-
-    
-
 
 </div>
