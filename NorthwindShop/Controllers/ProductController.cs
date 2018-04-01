@@ -101,7 +101,6 @@ namespace NorthwindShop.Controllers
         [HttpPost]
         public ActionResult Cart(int? IdProductSet,int? InputText)
         {
-
             var Product = DbShop.Products.First(p => p.ProductID == IdProductSet);
             
             HttpCookie cookieProduct = new HttpCookie("Product", IdProductSet.ToString() + "/" + InputText.ToString());
