@@ -107,6 +107,7 @@
     <Content Include="Content\CSS\LayoutStyle.css" />
     <Content Include="Content\CSS\ModalWindowCSS.css" />
     <Content Include="Content\CSS\ProductCSS.css" />
+    <Content Include="Content\CSS\ValidationErrorStyle.css" />
     <Content Include="Content\CSS\WindowCSS.css" />
     <Content Include="Content\Images\JessicaLogo.png" />
     <Content Include="Content\CSS\PagedList.css" />
