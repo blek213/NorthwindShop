@@ -1,4 +1,5 @@
-﻿using NorthwindShop.Models;
+﻿using NorthwindShop.Filters;
+using NorthwindShop.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -99,15 +100,31 @@ namespace NorthwindShop.Controllers
        
 
         [HttpPost]
-        public ActionResult Cart(int? IdProductSet,int? InputText)
+        public ActionResult Cart(int? IdProductSet,int? InputText, string button)
         {
             var Product = DbShop.Products.First(p => p.ProductID == IdProductSet);
-            
+
             HttpCookie cookieProduct = new HttpCookie("Product", IdProductSet.ToString() + "/" + InputText.ToString());
 
             Response.Cookies.Add(cookieProduct);
 
+            if(button == "Buy")
+            {
+                return RedirectToAction("BuyProduct", "Product");
+            }
+          
             return RedirectToAction("Confection", "Product", new { Id = IdProductSet });
+        }
+
+        [MyAuth]
+        public ActionResult BuyProduct()
+        {
+            var productCookie= Response.Cookies["Product"];
+
+            productCookie.Expires = System.DateTime.Now.AddYears(-5);
+
+
+            return RedirectToAction("Index","Home");
         }
 
         public ActionResult AddToCart(int? IdProductFromView)

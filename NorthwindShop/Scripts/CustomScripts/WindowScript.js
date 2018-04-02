@@ -12,11 +12,13 @@
         hiddenId = encodeURIComponent(hiddenId);
         $('#ProductNameInWindow').load("http://localhost:56567/Product/AddToCart?IdProductFromView=" + hiddenId);
     });
+
     $('#plusButton').click(function (e) {
         var getVal = $('#InputText').val();
         getVal++;
         $('#InputText').val(String(getVal));
-    });
+        });
+
     $('#minusButton').click(function (e) {
         var getVal = $('#InputText').val();
         if (getVal != 1) {

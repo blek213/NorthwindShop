@@ -38,9 +38,9 @@ a{
     text-decoration:none;
 }
 
-#SignIn, #Register {
-    padding:6px;
-    border:1px solid #000000;
+#SignIn, #Register, #SignOff {
+    padding: 6px;
+    border: 1px solid #000000;
 }
 
 #userLayout {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace NorthwindShop.Controllers
 {
@@ -84,6 +85,8 @@ namespace NorthwindShop.Controllers
                 {
                     if(b.Email == login.Email && b.Password == login.Password)
                     {
+                        FormsAuthentication.SetAuthCookie(b.Name, true);
+
                         return RedirectToAction("Index", "Home");
                     }
                 }
@@ -194,9 +197,20 @@ namespace NorthwindShop.Controllers
 
                 DbShop.Clients.Add(client);
                 DbShop.SaveChanges();
+
+                FormsAuthentication.SetAuthCookie(register.Name, true);
+
             }
 
             return View(register);
+        }
+
+        [HttpPost]
+        public ActionResult SignOff()
+        {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Index", "Home");
         }
 
     }
