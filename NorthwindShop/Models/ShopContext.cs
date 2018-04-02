@@ -4,6 +4,7 @@ namespace NorthwindShop.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using NorthwindShop.Models.ShopModels;
 
     public partial class ShopContext : DbContext
     {
@@ -24,6 +25,7 @@ namespace NorthwindShop.Models
         public virtual DbSet<Suppliers> Suppliers { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Territories> Territories { get; set; }
+        public virtual DbSet<Clients> Clients { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

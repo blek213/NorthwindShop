@@ -141,8 +141,10 @@
     <Compile Include="Models\ShopContext.cs" />
     <Compile Include="Models\ShopModels\Suppliers.cs" />
     <Compile Include="Models\ShopModels\sysdiagrams.cs" />
+    <Compile Include="Models\ShopModels\Clients.cs" />
     <Compile Include="Models\TemporaryModels\Login.cs" />
     <Compile Include="Models\ShopModels\Territories.cs" />
+    <Compile Include="Models\TemporaryModels\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
