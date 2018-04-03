@@ -130,7 +130,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\CSS\CartStyle.css" />
     <Content Include="Content\CSS\LayoutStyle.css" />
     <Content Include="Content\CSS\ModalWindowCSS.css" />
     <Content Include="Content\CSS\ProductCSS.css" />
@@ -140,6 +139,7 @@
     <Content Include="Content\CSS\PagedList.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\CustomScripts\RedirectScript.js" />
     <Content Include="Scripts\CustomScripts\WindowScript.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -191,6 +191,8 @@
     <Content Include="Views\User\SignIn.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Product\AddToCart.cshtml" />
+    <Content Include="Views\Product\BuyProduct.cshtml" />
+    <Content Include="Views\Product\RedirectTOIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

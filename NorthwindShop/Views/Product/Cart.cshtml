@@ -5,14 +5,22 @@
 }
 
 <div id="CartLayout">
-    <ol>
+    
         @{
             if (Request.Cookies["Product"] != null)
             {
-                <li><b>Name:</b> @ViewBag.ourProduct.ProductName <b>Count:</b> @ViewBag.Count </li>
+                <ol>
+                    <li><b>Name:</b> @ViewBag.ourProduct.ProductName <b>Count:</b> @ViewBag.Count </li>
+                </ol>
+                    <div>
+                        @using (Html.BeginForm("BuyProduct", "Product"))
+                {
+                            <input type="submit" value="Buy" />
+                        }
+                    </div>
 
-            }
-        }
-    </ol>
+                    }
+                    }
+               
 
 </div>

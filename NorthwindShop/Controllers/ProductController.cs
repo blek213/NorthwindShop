@@ -124,7 +124,7 @@ namespace NorthwindShop.Controllers
             productCookie.Expires = System.DateTime.Now.AddYears(-5);
 
 
-            return RedirectToAction("Index","Home");
+            return View();
         }
 
         public ActionResult AddToCart(int? IdProductFromView)
@@ -132,6 +132,11 @@ namespace NorthwindShop.Controllers
             var Product = DbShop.Products.First(p => p.ProductID == IdProductFromView);
 
             return PartialView(Product);
+        }
+
+        public ActionResult RedirectTOIndex()
+        {
+            return RedirectToAction("Index", "Home");
         }
 
 

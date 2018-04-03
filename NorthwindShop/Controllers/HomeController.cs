@@ -52,5 +52,6 @@ namespace NorthwindShop.Controllers
 
             return View(beverages.ToPagedList(pageNumber,pageSize));
         }
+
     }
 }
