@@ -52,13 +52,13 @@ namespace NorthwindShop.Controllers
         }
 
         public ActionResult Cart()
-        {
-            
+        {  
             if(Request.Cookies["Product"] != null)
             {
                 HttpCookie cookieProduct = Request.Cookies["Product"];
 
-                //Distribution our cookie value in two values: 1) ProductId 2) Count
+                // Distribution our cookie value in two values: 
+                // 1) ProductId 2) Count
 
                 string str = cookieProduct.Value;
 
@@ -84,11 +84,11 @@ namespace NorthwindShop.Controllers
 
                 int Count = Int32.Parse(CountValue);
 
-                //Found our model by ProductId
+                // Found our model by ProductId
 
                 var FoundModel = DbShop.Products.First(p => p.ProductID == ProductId);
 
-                //Representing our values for client
+                // Representing our values for client
 
                 ViewBag.ourProduct = FoundModel;
 
@@ -98,7 +98,6 @@ namespace NorthwindShop.Controllers
             return View();
         }
        
-
         [HttpPost]
         public ActionResult Cart(int? IdProductSet,int? InputText, string button)
         {
@@ -123,7 +122,6 @@ namespace NorthwindShop.Controllers
 
             productCookie.Expires = System.DateTime.Now.AddYears(-5);
 
-
             return View();
         }
 
@@ -138,7 +136,6 @@ namespace NorthwindShop.Controllers
         {
             return RedirectToAction("Index", "Home");
         }
-
 
     }
 }

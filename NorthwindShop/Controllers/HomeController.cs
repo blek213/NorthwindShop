@@ -11,7 +11,7 @@ namespace NorthwindShop.Controllers
     public class HomeController : Controller
     {
         ShopContext DbShop = new ShopContext();
-        // GET: Home
+       
         public ActionResult Index()
         {
             return View();

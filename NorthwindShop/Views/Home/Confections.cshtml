@@ -1,6 +1,8 @@
 ﻿@model PagedList.IPagedList<NorthwindShop.Models.Products>
 @using PagedList.Mvc;
+
 <link href="~/Content/CSS/PagedList.css" rel="stylesheet"  type="text/css" />
+
 @{
     ViewBag.Title = "Confections";
     Layout = "~/Views/_Layout.cshtml";
@@ -8,6 +10,7 @@
 
 <div id="confections">
     <ul type="square">
+
         @foreach (var b in Model)
         {
             <li><a  href="/Product/Confection/@b.ProductID" > @b.ProductName</a></li>

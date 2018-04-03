@@ -12,6 +12,7 @@ namespace NorthwindShop.Filters
         public void OnAuthentication(AuthenticationContext filterContext)
         {
             var user = filterContext.HttpContext.User;
+
             if (user == null || !user.Identity.IsAuthenticated)
             {
                 filterContext.Result = new HttpUnauthorizedResult();
@@ -21,6 +22,7 @@ namespace NorthwindShop.Filters
         public void OnAuthenticationChallenge(AuthenticationChallengeContext filterContext)
         {
             var user = filterContext.HttpContext.User;
+
             if (user == null || !user.Identity.IsAuthenticated)
             {
                 filterContext.Result = new RedirectToRouteResult(

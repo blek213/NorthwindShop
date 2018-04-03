@@ -40,7 +40,6 @@
 <input class="open_window" type="button" value="Buy" />
 
 
-
 <div class="overlay" title="Shopping cart"></div>
 <div class="popup">
     <h1 style="text-align:center;">Shopping cart</h1>
@@ -52,12 +51,12 @@
                 <span id="ContinueButtonTag">
 
                     <input name="IdProductSet" type="hidden" value="@Model.ProductID" />
-                    <input id="ContinueButton" type="submit" value="Continue">
+                    <input  name="button"  id="ContinueButton" type="submit" value="Continue">
 
 
                 </span>
 
-                <span id="BuyButtonTag"><input id="BuyButton" type="button" value="Buy"></span>
+                <span id="BuyButtonTag"><input name="button" id="BuyButton" type="button" value="Buy"></span>
             </div>
         }
 

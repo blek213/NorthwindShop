@@ -15,7 +15,6 @@ namespace NorthwindShop.Controllers
     {
         ShopContext DbShop = new ShopContext();
 
-
         [HttpGet]
         public ActionResult SignIn()
         {
@@ -27,7 +26,7 @@ namespace NorthwindShop.Controllers
         {
             IEnumerable<Clients> clients = DbShop.Clients;
 
-            //Email Validation
+            // Email Validation
 
             if (string.IsNullOrEmpty(login.Email))
             {
@@ -39,7 +38,7 @@ namespace NorthwindShop.Controllers
                 ModelState.AddModelError("Email", "Not correct email");
             }
 
-            //Password Validation
+            // Password Validation
 
             if (string.IsNullOrEmpty(login.Password))
             {
@@ -56,7 +55,7 @@ namespace NorthwindShop.Controllers
                 ModelState.AddModelError("Password", "Max value is 50");
             }
 
-            //Check if user exist 
+            // Check if user exist 
 
             int checkVal = 0;
 
@@ -101,8 +100,6 @@ namespace NorthwindShop.Controllers
         [HttpGet]
         public ActionResult Register()
         {
-
-
             return View();
         }
 
@@ -111,7 +108,7 @@ namespace NorthwindShop.Controllers
         {
             IEnumerable<Clients> clients = DbShop.Clients;
 
-            //Name Validation
+            // Name Validation
 
             if (string.IsNullOrEmpty(register.Name))
             {
@@ -123,7 +120,7 @@ namespace NorthwindShop.Controllers
                 ModelState.AddModelError("Name", "The Name must be between 50 and 3 symbols");
             }
 
-            //Email Validation
+            // Email Validation
 
             if (string.IsNullOrEmpty(register.Email))
             {
@@ -135,7 +132,7 @@ namespace NorthwindShop.Controllers
                 ModelState.AddModelError("Email", "Not correct email");
             }
 
-            //Password Validation
+            // Password Validation
 
             if (string.IsNullOrEmpty(register.Password))
             {
@@ -152,7 +149,7 @@ namespace NorthwindShop.Controllers
                 ModelState.AddModelError("Password", "Max value is 50");
             }
 
-            //RepeatPassword Validation
+            // RepeatPassword Validation
 
             if (string.IsNullOrEmpty(register.RepeatPassword))
             {
@@ -175,7 +172,7 @@ namespace NorthwindShop.Controllers
                 ModelState.AddModelError("RepeatPassword", "Passwords are not equal");
             }
 
-            //Check if user exist 
+            // Check if user exist 
 
             foreach(var b in clients)
             {
@@ -199,7 +196,6 @@ namespace NorthwindShop.Controllers
                 DbShop.SaveChanges();
 
                 FormsAuthentication.SetAuthCookie(register.Name, true);
-
             }
 
             return View(register);

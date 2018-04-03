@@ -2,12 +2,15 @@
 @using PagedList.Mvc;
 
 <link href="~/Content/CSS/PagedList.css" rel="stylesheet" type="text/css" />
+
 @{
     ViewBag.Title = "Beverages";
     Layout = "~/Views/_Layout.cshtml";
 }
+
 <div id="beverages">
     <ul type="square">
+
         @foreach (var b in Model)
         {
             <li><a href="/Product/Beverage/@b.ProductID">@b.ProductName</li>
